@@ -1,0 +1,15 @@
+SimulationType           Fitting
+
+DisplayName              TAMOF-1
+ColumnPressure           2
+ColumnLoading            3
+PressureScale            log
+
+
+Component 0 MoleculeName               CO2
+            FileName                   isotherm_CO2_323K.txt
+            NumberOfIsothermSites      3
+            Langmuir-Freundlich        0 0 0 
+            Langmuir-Freundlich        0 0 0
+            Langmuir-Freundlich        0 0 0
+

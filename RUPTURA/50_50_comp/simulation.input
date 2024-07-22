@@ -1,0 +1,37 @@
+SimulationType           Breakthrough
+
+// Column settings
+DisplayName              TAMOF-1
+Temperature              303.15           // [K]
+ColumnVoidFraction       0.5916           // [-]
+ParticleDensity          1153.80669328937 // [kg/m^3]  // From unit cell volume and atom masess.
+TotalPressure            1.3e5            // [Pa]      // Experimental setup.
+PressureGradient         0.0              // [Pa/m]
+ColumnEntranceVelocity   0.023         // [m/s]     // Flux Velocity, experimental setup (0.015 m/s) / ColumnVoidFraction (0.5916)
+ColumnLength             0.053            // [m]       // Experimental setup
+
+// Run settings
+NumberOfTimeSteps       auto
+PrintEvery              10000
+WriteEvery              10000
+TimeStep                0.0005           // [s]
+NumberOfGridPoints      100
+
+Component 0 MoleculeName               Helium
+            GasPhaseMolFraction        0.95    // [-]
+            CarrierGas                 yes
+
+Component 1 MoleculeName               CO2
+            GasPhaseMolFraction        0.025    // [-]
+            MassTransferCoefficient    0.01    // [1/s]
+            AxialDispersionCoefficient 0.0     // [m^2/s]
+            NumberOfIsothermSites      2
+            Langmuir-Freundlich        1.20173 0.000893623 1.03226
+            Langmuir-Freundlich        6.71724 8.0165e-06 0.945987
+
+Component 1 MoleculeName               CH4
+            GasPhaseMolFraction        0.025    // [-]
+            MassTransferCoefficient    0.05    // [1/s]
+            AxialDispersionCoefficient 0.0     // [m^2/s]
+            NumberOfIsothermSites      1
+            Langmuir-Freundlich        5.56069 6.55291e-06 0.876356

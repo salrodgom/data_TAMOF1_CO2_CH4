@@ -1,0 +1,61 @@
+set encoding iso_8859_1
+set term postscript eps color enhanced font 'Helvetica,10'
+set output 'breakthrough.eps'
+set xlabel 'Time, {/Helvetica-Italic t} / [min.]' font "Helvetica,9"
+set ylabel 'Concentration exit gas, {/Helvetica-Italic c}_i/{/Helvetica-Italic c}_{i,0} / [-]' font "Helvetica,9"
+set key bottom right center font 'Helvetica, 10'
+set bmargin 4
+set yrange[0:1.2]
+set xrange [0:50]
+set grid
+set linetype 1 pt 5 ps 1 lw 4 lc rgb '0xee0000'
+set linetype 2 pt 7 ps 1 lw 4 lc rgb '0x008b00'
+set linetype 3 pt 9 ps 1 lw 4 lc rgb '0x0000cd'
+set linetype 4 pt 11 ps 1 lw 4 lc rgb '0xff3fb3'
+set linetype 5 pt 13 ps 1 lw 4 lc rgb '0x00cdcd'
+set linetype 6 pt 15 ps 1 lw 4 lc rgb '0xcd9b1d'
+set linetype 7 pt  4 ps 1 lw 4 lc rgb '0x8968ed'
+set linetype 8 pt  6 ps 1 lw 4 lc rgb '0x8b8b83'
+set linetype 9 pt  8 ps 1 lw 4 lc rgb '0x00bb00'
+set linetype 10 pt 10 ps 1 lw 4 lc rgb '0x1e90ff'
+set linetype 11 pt 12 ps 1 lw 4 lc rgb '0x8b2500'
+set linetype 12 pt 14 ps 1 lw 4 lc rgb '0x000000'
+ev=1
+set size 1,0.3333
+set multiplot
+set size 0.3333,0.3333
+set origin 0,0
+#rw-r--r-- 1 salvador salvador 13847 oct  6 17:16 30_70_CH4.data
+#rw-r--r-- 1 salvador salvador 10294 oct  6 17:16 50_50_CH4.data
+#rw-r--r-- 1 salvador salvador  8467 oct  6 17:16 70_30_CH4.data
+#rw-r--r-- 1 salvador salvador 15407 oct  6 17:16 30_70_CO2.data
+#rw-r--r-- 1 salvador salvador 11425 oct  6 17:16 50_50_CO2.data
+#rw-r--r-- 1 salvador salvador  9354 oct  6 17:16 70_30_CO2.data
+#rw-r--r-- 1 salvador salvador 13623 oct  6 17:16 30_70_Helium.data
+#rw-r--r-- 1 salvador salvador 10278 oct  6 17:16 50_50_Helium.data
+#rw-r--r-- 1 salvador salvador  8445 oct  6 17:16 70_30_Helium.data
+
+
+plot 1 w l lc rgb 'black' notitle,\
+     "30_70_Helium.data" us ($2):($3) every ev title "He (y_i=0.95)" with li lt 1,\
+     "30_70_CO2.data" us ($2):($3) every ev title "CO_2 (y_i=0.015)" with li lt 2,\
+     "30_70_CH4.data" us ($2):($3) every ev title "CH_4 (y_i=0.035)" with li lt 3,\
+     "co2_30_70_TAMOF-1_experiments.txt" w p ps 0.5 pt 7 lc rgb 'light-green' notitle,\
+     "ch4_30_70_TAMOF-1_experiments.txt" w p ps 0.5 pt 7 lc rgb 'light-blue' notitle
+
+set origin 0.3333,0
+plot 1 w l lc rgb 'black' notitle,\
+     "50_50_Helium.data" us ($2):($3) every ev title "He (y_i=0.95)" with li lt 1,\
+     "50_50_CO2.data" us ($2):($3) every ev title "CO_2 (y_i=0.025)" with li lt 2,\
+     "50_50_CH4.data" us ($2):($3) every ev title "CH_4 (y_i=0.025)" with li lt 3,\
+     "co2_50_50_TAMOF-1_experiments.txt" w p ps 0.5 pt 7 lc rgb 'light-green' notitle,\
+     "ch4_50_50_TAMOF-1_experiments.txt" w p ps 0.5 pt 7 lc rgb 'light-blue' notitle
+
+set origin 0.6666,0
+plot 1 w l lc rgb 'black' notitle,\
+     "70_30_Helium.data" us ($2):($3) every ev title "He (y_i=0.95)" with li lt 1,\
+     "70_30_CO2.data" us ($2):($3) every ev title "CO_2 (y_i=0.035)" with li lt 2,\
+     "70_30_CH4.data" us ($2):($3) every ev title "CH_4 (y_i=0.025)" with li lt 3
+
+unset multiplot
+

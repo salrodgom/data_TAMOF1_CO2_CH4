@@ -1,0 +1,499 @@
+
+
+*******************************************************************************
+Mon Jul 22 11:40:27 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_333K.txt' u 2:3
+        format = x:z
+        #datapoints = 29
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.7720077072e+03   0.00e+00  3.90e+00    1.000000e+00
+   5 5.1112214344e-19   0.00e+00  3.90e-05    5.710914e+00
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 5.11122e-19
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.35109e-10
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.82544e-20
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.71091          +/- 6.439e-12    (1.127e-10%)
+
+
+*******************************************************************************
+Mon Jul 22 11:40:27 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_333K.txt' u 3:4
+        format = x:z
+        x range restricted to [1.00000 : 25.0000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: D_333(x)
+	D_333(x)=D0_333+m*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   D0_333        m            
+   0 2.9935957809e+03   0.00e+00  8.15e+00    1.000000e+00   1.000000e+00
+   4 1.3224018945e-02  -3.39e-01  8.15e-04    1.215825e-02   6.627804e-03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.013224
+rel. change during last iteration : -3.3876e-06
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0271048
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000734668
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+D0_333          = 0.0121582        +/- 0.01079      (88.78%)
+m               = 0.0066278        +/- 0.0009403    (14.19%)
+
+correlation matrix of the fit parameters:
+                D0_333 m      
+D0_333          1.000 
+m              -0.827  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:40:27 2024
+
+
+FIT:    data read from 'methane_self_diffusivity_313K.txt' u 2:3
+        format = x:z
+        x range restricted to [0.00000 : 8.00000]
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 5.4292231124e-19   0.00e+00  1.59e+01    5.710914e+00
+   3 5.3975489477e-19   0.00e+00  1.59e+01    5.710914e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.39755e-19
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 17
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.78186e-10
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.17503e-20
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.71091          +/- 1.513e-11    (2.649e-10%)
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_333K.txt' u 2:3
+        format = x:z
+        #datapoints = 29
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.7720077072e+03   0.00e+00  3.90e+00    1.000000e+00
+   5 5.1112214344e-19   0.00e+00  3.90e-05    5.710914e+00
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 5.11122e-19
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.35109e-10
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.82544e-20
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.71091          +/- 6.439e-12    (1.127e-10%)
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_263K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [1.00000 : 8.00000]
+        #datapoints = 27
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_263(x)
+	f_263(x)=D_263 + b_263*(x-c_263)**2 * e_263*exp(-x**f_263/c_263)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_263         c_263         D_263         e_263         f_263        
+   0 1.3920706780e+01   0.00e+00  5.02e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  10 1.8100808529e-01  -6.58e-01  5.02e-02    2.078722e+00   9.810182e-01  -1.592203e-02   2.078722e+00   9.259507e-01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.181008
+rel. change during last iteration : -6.57611e-06
+
+degrees of freedom    (FIT_NDF)                        : 22
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0907063
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00822764
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_263           = 2.07872          +/- 8.337e+11    (4.011e+13%)
+c_263           = 0.981018         +/- 0.1107       (11.28%)
+D_263           = -0.015922        +/- 0.07787      (489.1%)
+e_263           = 2.07872          +/- 8.337e+11    (4.011e+13%)
+f_263           = 0.925951         +/- 0.07416      (8.009%)
+
+correlation matrix of the fit parameters:
+                b_263  c_263  D_263  e_263  f_263  
+b_263           1.000 
+c_263          -0.155  1.000 
+D_263          -0.023  0.912  1.000 
+e_263          -1.000  0.155  0.023  1.000 
+f_263          -0.242  0.986  0.901  0.242  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_333K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [1.00000 : 8.00000]
+        #datapoints = 23
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_333(x)
+	f_333(x)=D_333 + b_333*(x-c_333)**2 * e_333*exp(-x**f_333/c_333)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_333         c_333         D_333         e_333         f_333        
+   0 3.5223539788e+00   0.00e+00  1.70e+00    2.078722e+00   9.810182e-01  -1.592203e-02   2.078722e+00   9.259507e-01
+  12 1.8471498489e-01  -1.03e-01  1.70e-07    2.607520e+00   1.158208e+00   4.784363e-01   2.581447e+00   1.147153e+00
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.184715
+rel. change during last iteration : -1.02685e-06
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.101301
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0102619
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_333           = 2.60752          +/- 6.82e+11     (2.616e+13%)
+c_333           = 1.15821          +/- 0.1131       (9.765%)
+D_333           = 0.478436         +/- 0.06141      (12.83%)
+e_333           = 2.58145          +/- 6.752e+11    (2.616e+13%)
+f_333           = 1.14715          +/- 0.08769      (7.644%)
+
+correlation matrix of the fit parameters:
+                b_333  c_333  D_333  e_333  f_333  
+b_333           1.000 
+c_333          -0.448  1.000 
+D_333          -0.174  0.819  1.000 
+e_333          -1.000  0.448  0.174  1.000 
+f_333          -0.389  0.973  0.857  0.389  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_303K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [1.00000 : 8.00000]
+        #datapoints = 24
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_303(x)
+	f_303(x)=D_303 + b_303*(x-c_303)**2 * e_303*exp(-x**f_303/c_303)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_303         c_303         D_303         e_303         f_303        
+   0 2.0767143562e+00   0.00e+00  1.77e+00    2.078722e+00   9.810182e-01  -1.592203e-02   2.078722e+00   9.259507e-01
+  12 4.5566570606e-01  -2.70e-01  1.77e-01    2.575473e+00   1.034923e+00   2.306142e-01   2.575472e+00   1.042928e+00
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.455666
+rel. change during last iteration : -2.70434e-06
+
+degrees of freedom    (FIT_NDF)                        : 19
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.154863
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0239824
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_303           = 2.57547          +/- 1.227e+12    (4.763e+13%)
+c_303           = 1.03492          +/- 0.1725       (16.67%)
+D_303           = 0.230614         +/- 0.1286       (55.75%)
+e_303           = 2.57547          +/- 1.227e+12    (4.763e+13%)
+f_303           = 1.04293          +/- 0.1299       (12.46%)
+
+correlation matrix of the fit parameters:
+                b_303  c_303  D_303  e_303  f_303  
+b_303           1.000 
+c_303          -0.026  1.000 
+D_303           0.023  0.891  1.000 
+e_303          -1.000  0.026 -0.023  1.000 
+f_303           0.010  0.987  0.913 -0.010  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'CO2_self_diffusivity_313K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [1.00000 : 8.00000]
+        #datapoints = 21
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_313(x)
+	f_313(x)=D_313 + b_313*(x-c_313)**2 * e_313*exp(-x**f_313/c_313)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_313         c_313         D_313         e_313         f_313        
+   0 1.5502650916e+00   0.00e+00  1.74e+00    2.078722e+00   9.810182e-01  -1.592203e-02   2.078722e+00   9.259507e-01
+   6 3.7827166812e-01  -9.82e-01  1.74e-06    2.499698e+00   9.134727e-01   9.454668e-02   2.499696e+00   9.301745e-01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 0.378272
+rel. change during last iteration : -9.81767e-06
+
+degrees of freedom    (FIT_NDF)                        : 16
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.153759
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.023642
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_313           = 2.4997           +/- 1.266e+12    (5.066e+13%)
+c_313           = 0.913473         +/- 0.2044       (22.37%)
+D_313           = 0.0945467        +/- 0.1987       (210.1%)
+e_313           = 2.4997           +/- 1.266e+12    (5.066e+13%)
+f_313           = 0.930174         +/- 0.1527       (16.42%)
+
+correlation matrix of the fit parameters:
+                b_313  c_313  D_313  e_313  f_313  
+b_313           1.000 
+c_313           0.084  1.000 
+D_313          -0.030  0.933  1.000 
+e_313          -1.000 -0.084  0.030  1.000 
+f_313           0.022  0.991  0.947 -0.022  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'methane_self_diffusivity_313K.txt' u 2:3
+        format = x:z
+        x range restricted to [1.00000 : 8.00000]
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 5.3104842473e-19   0.00e+00  1.93e+01    5.710914e+00
+   3 5.2912468660e-19   0.00e+00  1.93e-02    5.710914e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 5.29125e-19
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.19322e-10
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.81022e-20
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.71091          +/- 1.875e-11    (3.283e-10%)
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'methane_self_diffusivity_263K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [0.00000 : 6.00000]
+        #datapoints = 21
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_263(x)
+	f_263(x)=D_263 + b_263*(x-c_263)**2 * e_263*exp(-x**f_263/c_263)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_263         c_263         D_263         e_263         f_263        
+   0 8.8340265208e+01   0.00e+00  2.00e+00    2.078722e+00   9.810182e-01  -1.592203e-02   2.078722e+00   9.259507e-01
+ 255 5.3677050616e-01  -9.79e-01  2.00e-03    1.306996e-02   1.238821e+02   9.180966e-01   1.306917e-02   3.572084e+00
+
+After 255 iterations the fit converged.
+final sum of squares of residuals : 0.536771
+rel. change during last iteration : -9.78962e-06
+
+degrees of freedom    (FIT_NDF)                        : 16
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.183162
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0335482
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_263           = 0.01307          +/- 3.114e+09    (2.383e+13%)
+c_263           = 123.882          +/- 76           (61.35%)
+D_263           = 0.918097         +/- 0.1556       (16.94%)
+e_263           = 0.0130692        +/- 3.114e+09    (2.383e+13%)
+f_263           = 3.57208          +/- 0.5295       (14.82%)
+
+correlation matrix of the fit parameters:
+                b_263  c_263  D_263  e_263  f_263  
+b_263           1.000 
+c_263           0.110  1.000 
+D_263           0.310  0.506  1.000 
+e_263          -1.000 -0.110 -0.310  1.000 
+f_263           0.165  0.974  0.661 -0.165  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'methane_self_diffusivity_333K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [0.00000 : 6.00000]
+        #datapoints = 13
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_333(x)
+	f_333(x)=D_333 + b_333*(x-c_333)**2 * e_333*exp(-x**f_333/c_333)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_333         c_333         D_333         e_333         f_333        
+   0 2.0933873371e+01   0.00e+00  2.49e+00    1.306996e-02   1.238821e+02   9.180966e-01   1.306917e-02   3.572084e+00
+ 327 1.5283505483e-01  -1.61e-01  2.49e-05    8.340970e-02   2.583272e+01   1.393017e+00   8.340463e-02   2.653808e+00
+
+After 327 iterations the fit converged.
+final sum of squares of residuals : 0.152835
+rel. change during last iteration : -1.606e-06
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.138219
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0191044
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_333           = 0.0834097        +/- 2.926e+10    (3.508e+13%)
+c_333           = 25.8327          +/- 4.274        (16.54%)
+D_333           = 1.39302          +/- 0.2264       (16.25%)
+e_333           = 0.0834046        +/- 2.926e+10    (3.508e+13%)
+f_333           = 2.65381          +/- 0.2613       (9.846%)
+
+correlation matrix of the fit parameters:
+                b_333  c_333  D_333  e_333  f_333  
+b_333           1.000 
+c_333          -0.052  1.000 
+D_333          -0.246  0.453  1.000 
+e_333          -1.000  0.052  0.246  1.000 
+f_333          -0.222  0.875  0.794  0.222  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'methane_self_diffusivity_303K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [0.00000 : 6.00000]
+        #datapoints = 19
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_303(x)
+	f_303(x)=D_303 + b_303*(x-c_303)**2 * e_303*exp(-x**f_303/c_303)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_303         c_303         D_303         e_303         f_303        
+   0 2.0428644629e+01   0.00e+00  2.52e+00    1.306996e-02   1.238821e+02   9.180966e-01   1.306917e-02   3.572084e+00
+ 400 1.1736049152e+00  -7.53e-04  2.52e-05    9.446741e-02   2.261032e+01   8.375885e-01   9.446164e-02   2.229526e+00
+
+After 400 iterations the fit converged.
+final sum of squares of residuals : 1.1736
+rel. change during last iteration : -7.52955e-09
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.289532
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0838289
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_303           = 0.0944674        +/- 1.913e+10    (2.025e+13%)
+c_303           = 22.6103          +/- 6.867        (30.37%)
+D_303           = 0.837589         +/- 0.8739       (104.3%)
+e_303           = 0.0944616        +/- 1.913e+10    (2.025e+13%)
+f_303           = 2.22953          +/- 0.5936       (26.62%)
+
+correlation matrix of the fit parameters:
+                b_303  c_303  D_303  e_303  f_303  
+b_303           1.000 
+c_303           0.216  1.000 
+D_303           0.384  0.247  1.000 
+e_303          -1.000 -0.216 -0.384  1.000 
+f_303           0.420  0.677  0.871 -0.420  1.000 
+
+
+*******************************************************************************
+Mon Jul 22 11:41:09 2024
+
+
+FIT:    data read from 'methane_self_diffusivity_313K.txt' u 2:($4*10)
+        format = x:z
+        x range restricted to [0.00000 : 6.00000]
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_313(x)
+	f_313(x)=D_313 + b_313*(x-c_313)**2 * e_313*exp(-x**f_313/c_313)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b_313         c_313         D_313         e_313         f_313        
+   0 3.0168136447e+01   0.00e+00  2.57e+00    1.306996e-02   1.238821e+02   9.180966e-01   1.306917e-02   3.572084e+00
+ 352 9.0815708665e-01  -1.30e-02  2.57e-05    7.957284e-02   2.723331e+01   9.391142e-01   7.956801e-02   2.443644e+00
+
+After 352 iterations the fit converged.
+final sum of squares of residuals : 0.908157
+rel. change during last iteration : -1.30281e-07
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.264307
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0698582
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b_313           = 0.0795728        +/- 4.161e+10    (5.229e+13%)
+c_313           = 27.2333          +/- 7.383        (27.11%)
+D_313           = 0.939114         +/- 0.7617       (81.11%)
+e_313           = 0.079568         +/- 4.16e+10     (5.229e+13%)
+f_313           = 2.44364          +/- 0.4682       (19.16%)
+
+correlation matrix of the fit parameters:
+                b_313  c_313  D_313  e_313  f_313  
+b_313           1.000 
+c_313          -0.424  1.000 
+D_313           0.170  0.144  1.000 
+e_313          -1.000  0.424 -0.170  1.000 
+f_313          -0.057  0.641  0.838  0.057  1.000 

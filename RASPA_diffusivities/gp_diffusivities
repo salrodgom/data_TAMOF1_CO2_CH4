@@ -1,0 +1,99 @@
+set encoding iso_8859_1
+set term postscript eps color enhanced font 'Helvetica,14'
+set output 'gp_diffusivities.eps'
+#set key title '{/:Italic T} = 313.15 K' font 'Helvetica, 12'
+#set key top left spacing 1.1 font 'Helvetica, 12'
+load 'inferno.pal'
+set size 1,0.5
+set multiplot
+#
+set size ratio 0.75
+set size 0.5,0.5
+set origin 0,0
+set key top right spacing 1.1 font 'Helvetica, 12'
+set key title 'CO_2' font 'Helvetica, 12'
+set xlabel 'Adsorption, {/Helvetica-Italic q} / [mol kg^-^1]' offset 0.0,0
+set x2label 'Adsorption, {/Helvetica-Italic q} / [molecules / u.c.]' offset 0.0,0
+set ylabel 'Self-diffusivity, {{/Helvetica-Italic D} / 10^-^9 [m^2 s^-^1]'
+set cblabel 'Temperature, {/Helvetica-Italic T} / [K]'
+#set format y '%1.1f'
+set ytics 0,0.5,2
+set yrange [0:2]
+set cbrange [260:340]
+#
+fit a*x 'CO2_self_diffusivity_333K.txt' u 2:3 via a
+set xtics nomirror
+set x2tics nomirror
+#
+set xrange [1:8]
+set x2range [1:8*a]
+#
+f_263(x)=D_263 + b_263*(x-c_263)**2 * e_263*exp(-x**f_263/c_263)
+fit f_263(x) 'CO2_self_diffusivity_263K.txt' u 2:($4*10) via b_263,c_263,D_263,e_263,f_263
+D_333=D_263; b_333=b_263; c_333=c_263; e_333=e_263 ; f_333=f_263
+D_303=D_263; b_303=b_263; c_303=c_263; e_303=e_263 ; f_303=f_263
+D_313=D_263; b_313=b_263; c_313=c_263; e_313=e_263 ; f_313=f_263
+#
+f_333(x)=D_333 + b_333*(x-c_333)**2 * e_333*exp(-x**f_333/c_333)
+fit f_333(x) 'CO2_self_diffusivity_333K.txt' u 2:($4*10) via b_333,c_333,D_333,e_333,f_333
+#
+f_303(x)=D_303 + b_303*(x-c_303)**2 * e_303*exp(-x**f_303/c_303)
+fit f_303(x) 'CO2_self_diffusivity_303K.txt' u 2:($4*10) via b_303,c_303,D_303,e_303,f_303
+#
+f_313(x)=D_313 + b_313*(x-c_313)**2 * e_313*exp(-x**f_313/c_313)
+fit f_313(x) 'CO2_self_diffusivity_313K.txt' u 2:($4*10) via b_313,c_313,D_313,e_313,f_313
+#
+print D_333,D_313,D_303,D_263
+#
+plot f_263(x) w l lc rgb 'black' notitle,\
+     f_303(x) w l lc rgb '#7e2f8e' notitle,\
+     f_313(x) w l lc rgb '#d95319' notitle,\
+     f_333(x) w l lc rgb 'orange' notitle,\
+     'CO2_self_diffusivity_263K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'CO2_self_diffusivity_303K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'CO2_self_diffusivity_313K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'CO2_self_diffusivity_333K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'CO2_self_diffusivity_263K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle,\
+     'CO2_self_diffusivity_303K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle,\
+     'CO2_self_diffusivity_313K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle,\
+     'CO2_self_diffusivity_333K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle
+##########################################################
+fit a*x 'methane_self_diffusivity_313K.txt' u 2:3 via a
+set autoscale
+set cbrange [260:340]
+set origin 0.5,0
+set xrange [0:6]
+set ytics 0.0,1,7
+set yrange [0:7]
+set x2range [0:6*a]
+set key title 'CH_4' font 'Helvetica, 12'
+#c_333=0.1; c_263=0.1;c_313=0.1;c_303=0.1
+f_263(x)=D_263 + b_263*(x-c_263)**2 * e_263*exp(-x**f_263/c_263)
+fit f_263(x) 'methane_self_diffusivity_263K.txt' u 2:($4*10) via b_263,c_263,D_263,e_263,f_263
+D_333=D_263; b_333=b_263; c_333=c_263; e_333=e_263 ; f_333=f_263
+D_303=D_263; b_303=b_263; c_303=c_263; e_303=e_263 ; f_303=f_263
+D_313=D_263; b_313=b_263; c_313=c_263; e_313=e_263 ; f_313=f_263
+#
+f_333(x)=D_333 + b_333*(x-c_333)**2 * e_333*exp(-x**f_333/c_333)
+fit f_333(x) 'methane_self_diffusivity_333K.txt' u 2:($4*10) via b_333,c_333,D_333,e_333,f_333
+#
+f_303(x)=D_303 + b_303*(x-c_303)**2 * e_303*exp(-x**f_303/c_303)
+fit f_303(x) 'methane_self_diffusivity_303K.txt' u 2:($4*10) via b_303,c_303,D_303,e_303,f_303
+#
+f_313(x)=D_313 + b_313*(x-c_313)**2 * e_313*exp(-x**f_313/c_313)
+fit f_313(x) 'methane_self_diffusivity_313K.txt' u 2:($4*10) via b_313,c_313,D_313,e_313,f_313
+#
+print D_333,D_313,D_303,D_263
+#
+plot f_263(x) w l lc rgb 'black' notitle,\
+     f_303(x) w l lc rgb '#7e2f8e' notitle,\
+     f_313(x) w l lc rgb '#d95319' notitle,\
+     f_333(x) w l lc rgb 'orange' notitle,\
+     'methane_self_diffusivity_263K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'methane_self_diffusivity_313K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'methane_self_diffusivity_333K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'methane_self_diffusivity_303K.txt' u 2:($4*10):($5*100) w yerrorbars pt 6 ps 1.2 lc rgb 'black' notitle,\
+     'methane_self_diffusivity_263K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle,\
+     'methane_self_diffusivity_333K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle,\
+     'methane_self_diffusivity_303K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle,\
+     'methane_self_diffusivity_313K.txt' u 2:($4*10):6 w p pt 7 ps 1.0 lc palette notitle

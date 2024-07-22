@@ -1,0 +1,24 @@
+SimulationType           Fitting
+
+DisplayName              TAMOF-1
+ColumnPressure           2
+ColumnLoading            3
+PressureScale            log
+
+
+Component 0 MoleculeName               CO2
+            FileName                   isotherm_CO2_263K.txt
+            NumberOfIsothermSites      2
+            Langmuir-Freundlich        1.34281 8.63467e-05 0.892323342
+            Langmuir-Freundlich        4.64294 2.10037e-10 1.210697725
+
+Component 1 MoleculeName               CH4
+            FileName                   isotherm_methane_263K.txt
+            NumberOfIsothermSites      1
+            Langmuir-Freundlich        6.03659 1.27372e-05 0.837298
+
+Component 2 MoleculeName               N2
+            FileName                   isotherm_N2_263K.txt
+            NumberOfIsothermSites      1
+            Langmuir-Freundlich        5.71344 1.57e-06 0.911939
+
